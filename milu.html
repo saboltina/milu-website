@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viesturin, būsi mans Valentīns?</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
-    #valentine-text {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    #response-buttons {
-        margin-top: 20px;
-    }
-    button {
-        font-size: 18px;
-        padding: 10px 20px;
-        margin: 0 10px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        background-color: #4CAF50;
-        color: white;
-    }
-    button:hover {
-        background-color: #45a049;
-    }
-    #animation {
-        display: none;
-        margin-top: 50px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nikebote.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+			background-color: beige;
+        }
+        h1 {
+            color: #ff5e63;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #ff5e63;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: red;
+        }
+        #response-images {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="valentine-text">Viesturin, būsi mans Valentīns?</h1>
-    <div id="response-buttons">
-        <button onclick="respond('yes')">Protams, Raušuk</button>
-        <button onclick="respond('no')">Nop, ej bekot</button>
-    </div>
-    <div id="animation">
-        <img src="https://th.bing.com/th/id/R.1cd9ae70cb7b5944621ef1fa90ba892a?rik=yADmj8tsUq1Jag&riu=http%3a%2f%2f2.bp.blogspot.com%2f-i7_Xl09Lz1Y%2fUV0O8orYOwI%2fAAAAAAAAACg%2fj43gBEygaWI%2fs1600%2fMy%2bheart%2bbelongs%2bto%2byou.jpg&ehk=UVwsXO0LMatFdkFDSozypZ0P5KEv4oWGaAtaqVPAIok%3d&risl=&pid=ImgRaw&r=0"
+    <h1>Will You Be My Valentine?</h1>
+    <button class="button" onclick="showResponse('yes')">Yes</button>
+    <button class="button" onclick="showResponse('no')">No</button>
+    <div id="response-images" style="display: none;">
+        <img id="yes-image" src="https://th.bing.com/th/id/OIP.urKaMn9u9imJOvhwSMB3dAAAAA?rs=1&pid=ImgDetMain" alt="Yes">
+        <img id="no-image" src="https://th.bing.com/th/id/OIP.PCqGsiYfZOxBruydFQhpiQHaGd?rs=1&pid=ImgDetMain" alt="No">
     </div>
 
     <script>
-        function respond(answer) {
-            if (answer === 'yes') {
-                document.getElementById('response-buttons').style.display = 'none';
-                document.getElementById('animation').style.display = 'block';
+        function showResponse(response) {
+            document.getElementById('response-images').style.display = 'block';
+            if (response === 'yes') {
+                document.getElementById('yes-image').style.display = 'block';
+                document.getElementById('no-image').style.display = 'none';
             } else {
-                alert("Nju tad neko, tapat mīlu tevi:(");
+                document.getElementById('yes-image').style.display = 'none';
+                document.getElementById('no-image').style.display = 'block';
             }
         }
     </script>
