@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viesturin, būsi mans Valentīns?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #valentine-text {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    #response-buttons {
+        margin-top: 20px;
+    }
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    #animation {
+        display: none;
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+    <h1 id="valentine-text">Viesturin, būsi mans Valentīns?</h1>
+    <div id="response-buttons">
+        <button onclick="respond('yes')">Protams, Raušuk</button>
+        <button onclick="respond('no')">Nop, ej bekot</button>
+    </div>
+    <div id="animation">
+        <img src="https://th.bing.com/th/id/R.1cd9ae70cb7b5944621ef1fa90ba892a?rik=yADmj8tsUq1Jag&riu=http%3a%2f%2f2.bp.blogspot.com%2f-i7_Xl09Lz1Y%2fUV0O8orYOwI%2fAAAAAAAAACg%2fj43gBEygaWI%2fs1600%2fMy%2bheart%2bbelongs%2bto%2byou.jpg&ehk=UVwsXO0LMatFdkFDSozypZ0P5KEv4oWGaAtaqVPAIok%3d&risl=&pid=ImgRaw&r=0"
+    </div>
+
+    <script>
+        function respond(answer) {
+            if (answer === 'yes') {
+                document.getElementById('response-buttons').style.display = 'none';
+                document.getElementById('animation').style.display = 'block';
+            } else {
+                alert("Nju tad neko, tapat mīlu tevi:(");
+            }
+        }
+    </script>
+</body>
+</html>
+
